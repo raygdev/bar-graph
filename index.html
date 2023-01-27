@@ -66,10 +66,7 @@
                     .attr('x', (d, i) => xScale(new Date(d[0])))
                     .attr('y', (d) =>  yScale(d[1])  )
                     .attr('width', 2 )
-                    .attr('height', (d) => {
-                        console.log(h - yScale(d[1]) - padding)
-                        return h - yScale(d[1]) - padding 
-                    } )
+                    .attr('height', (d) => h - yScale(d[1]) - padding)
 
                 svg.append('g')
                 .attr('id', 'y-axis')
